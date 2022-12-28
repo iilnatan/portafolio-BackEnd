@@ -9,8 +9,6 @@ import org.springframework.stereotype.Repository;
  * @author marco
  */
 @Repository
-public interface PersonaRepository extends JpaRepository<Persona, Long>{
-    public void deleteAllById(Long id);
-    public Object findAllById(Long id);
+public interface IPersonaRepository extends JpaRepository<Persona,Long> {
     
 }

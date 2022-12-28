@@ -8,8 +8,15 @@ import java.util.List;
  * @author marco
  */
 public interface IPersonaService {
-    public List<Persona> verPersonas ();
-    public void crearPersona (Persona per);
-    public void borrarPersona (Long id);
-    public Persona buscarPersona(Long id);
+    //Traer una lista de personas
+    public List<Persona> getPersona();
+    
+    //Guardar un objeto de tipo Persona
+    public void savePersona(Persona persona);
+    
+    //Eliminar un objeto pero lo buscamos por ID
+    public void deletePersona(Long id);
+    
+    //Buscar una persona por ID
+    public Persona findPersona(Long id);
 }

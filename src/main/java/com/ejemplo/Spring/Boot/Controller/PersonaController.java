@@ -8,6 +8,7 @@ import com.ejemplo.Spring.Boot.model.Persona;
 import com.ejemplo.Spring.Boot.service.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,41 +24,49 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author marco
  */
-@CrossOrigin(origins="http://localhost:4200",maxAge=3600)
-
 @RestController
-public class Controller {
+@CrossOrigin(origins = "http://localhost:4200")
+public class PersonaController {
+    @Autowired IPersonaService ipersonaService;
     
-    @Autowired
-    private IPersonaService persoServ;
+    @GetMapping("personas/traer")
+    public List<Persona> getPersona(){
+        return ipersonaService.getPersona();
+    }
     
-    @PostMapping ("/personas/new")
-    public void agregarPersona (@RequestBody Persona pers){
-        persoServ.crearPersona(pers);
+    @PreAuthorize("hasRole('ADMIN')")
+    @PostMapping("/personas/crear")
+    public String createPersona(@RequestBody Persona persona){
+        ipersonaService.savePersona(persona);
+        return "La persona fue creada correctamente";
     }
-    @GetMapping ("/personas/ver")
-    @ResponseBody
-    public List<Persona> verPersonas(){
-            return persoServ.verPersonas();
+    
+    @PreAuthorize("hasRole('ADMIN')")
+    @DeleteMapping("/personas/borrar/{id}")
+    public String deletePersona(@PathVariable Long id){
+        ipersonaService.deletePersona(id);
+        return "La persona fue eliminada correctamente";
     }
-    @DeleteMapping ("/personas/delete/{id}")
-    public void borrarPersona (@PathVariable Long id){
-        persoServ.borrarPersona(id);
-    }
-    @PutMapping ("/personas/editar/{id}")
+    
+    @PreAuthorize("hasRole('ADMIN')")
+    @PutMapping("/personas/editar/{id}")
     public Persona editPersona(@PathVariable Long id,
                                @RequestParam("nombre") String nuevoNombre,
                                @RequestParam("apellido") String nuevoApellido,
                                @RequestParam("img") String nuevoImg){
-        Persona persona = persoServ.buscarPersona(id);
+        Persona persona = ipersonaService.findPersona(id);
+        
         persona.setNombre(nuevoNombre);
         persona.setApellido(nuevoApellido);
         persona.setImg(nuevoImg);
-        persoServ.crearPersona(persona);
+        
+        ipersonaService.savePersona(persona);
         return persona;
     }
-    @GetMapping("/personas/traer/perfil")
-    public Persona buscarPersona(){
-        return persoServ.buscarPersona((long)3);
+    
+    @GetMapping("personas/traer/perfil")
+    public Persona findPersona(){
+        return ipersonaService.findPersona((long)1);
     }
+   
 }

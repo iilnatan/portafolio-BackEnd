@@ -15,6 +15,8 @@ public class LoginUsuario {
     private String nombreUsuario;
     @NotBlank
     private String password;
+    
+    //Getter & Setter
 
     public String getNombreUsuario() {
         return nombreUsuario;
@@ -31,6 +33,5 @@ public class LoginUsuario {
     public void setPassword(String password) {
         this.password = password;
     }
-
     
 }

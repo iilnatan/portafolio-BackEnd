@@ -26,20 +26,13 @@ public class Persona {
     private Long id;
     
     @NotNull
-    @Size(min=1, max=50, message="no cumple con la longitud.")    
+    @Size(min = 1, max = 50, message = "no cumple con la longitud")
     private String nombre;
-    @Size(min=1, max=50, message="no cumple con la longitud.")    
-
-    private String apellido;
-    @Size(min=1, max=50, message="no cumple con la longitud.")    
-
-    private String img;
     
-    public Persona(){
-    }
-    public Persona(Long id, String nombre,String apellido){
-        this.id=id;
-        this.nombre=nombre;
-        this.apellido=apellido;
-    }
+    @NotNull
+    @Size(min = 1, max = 50, message = "no cumple con la longitud")
+    private String apellido;
+    
+    @Size(min = 1, max = 50, message = "no cumple con la longitud")
+    private String img;
 }
