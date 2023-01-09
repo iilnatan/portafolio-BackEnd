@@ -10,7 +10,7 @@ import javax.validation.constraints.NotBlank;
  *
  * @author marco
  */
-public class LoginUsuario {
+    public class LoginUsuario {
     @NotBlank
     private String nombreUsuario;
     @NotBlank

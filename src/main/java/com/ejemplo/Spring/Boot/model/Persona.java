@@ -18,7 +18,7 @@ import lombok.Setter;
  *
  * @author marco
  */
-@Getter @Setter
+    @Getter @Setter
 @Entity
 public class Persona {
     @Id
