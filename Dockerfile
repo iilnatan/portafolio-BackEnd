@@ -1,7 +1,7 @@
+FROM amazoncorretto:19-alpine-jdk
 
-# Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-# Click nbfs://nbhost/SystemFileSystem/Templates/Other/Dockerfile to edit this template
+MAINTAINER iilnatan
 
-FROM alpine:latest
+COPY target/Spring-Boot-0.0.1-SNAPSHOT.jar Spring-Boot-0.0.1-SNAPSHOT.jar
 
-CMD ["/bin/sh"]
+ENTRYPOINT ["java","-jar","/Spring-Boot-0.0.1-SNAPSHOT.jar"]
