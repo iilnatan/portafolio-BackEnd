@@ -2,9 +2,11 @@ com\ejemplo\Spring\Boot\Security\Service\UsuarioService.class
 com\ejemplo\Spring\Boot\Security\Repository\iRolRepository.class
 com\ejemplo\Spring\Boot\Controller\PersonaController.class
 com\ejemplo\Spring\Boot\Security\Entity\Usuario.class
+com\ejemplo\Spring\Boot\Dto\hysDto.class
 com\ejemplo\Spring\Boot\repositorio\IPersonaRepository.class
 com\ejemplo\Spring\Boot\model\Experiencia.class
 com\ejemplo\Spring\Boot\Security\Dto\NuevoUsuario.class
+com\ejemplo\Spring\Boot\repositorio\hysR.class
 com\ejemplo\Spring\Boot\Security\Service\RolService.class
 com\ejemplo\Spring\Boot\Security\jwt\JwtTokenFilter.class
 com\ejemplo\Spring\Boot\Security\jwt\JwtProvider.class
@@ -19,6 +21,8 @@ com\ejemplo\Spring\Boot\Security\MainSecurity.class
 com\ejemplo\Spring\Boot\Controller\CExperiencia.class
 com\ejemplo\Spring\Boot\service\IPersonaService.class
 com\ejemplo\Spring\Boot\Security\Dto\JwtDto.class
+com\ejemplo\Spring\Boot\Controller\hysC.class
+com\ejemplo\Spring\Boot\model\hys.class
 com\ejemplo\Spring\Boot\repositorio\RExperiencia.class
 com\ejemplo\Spring\Boot\Security\Enums\RolNombre.class
 com\ejemplo\Spring\Boot\Security\Repository\iUsuarioRepository.class
@@ -26,4 +30,5 @@ com\ejemplo\Spring\Boot\service\ImpPersonaService.class
 com\ejemplo\Spring\Boot\Security\Entity\Rol.class
 com\ejemplo\Spring\Boot\Application.class
 com\ejemplo\Spring\Boot\Security\Service\UserDetailsImpl.class
+com\ejemplo\Spring\Boot\service\hysS.class
 com\ejemplo\Spring\Boot\service\SExperiencia.class
