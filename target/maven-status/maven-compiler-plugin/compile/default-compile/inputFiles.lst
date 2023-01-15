@@ -15,7 +15,6 @@ F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\Dto\h
 F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\Security\Service\UserDetailsImpl.java
 F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\Security\Controller\Mensaje.java
 F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\Security\Service\UsuarioService.java
-F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\service\IPersonaService.java
 F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\repositorio\IPersonaRepository.java
 F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\repositorio\hysR.java
 F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\Security\Dto\LoginUsuario.java
@@ -26,6 +25,7 @@ F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\Secur
 F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\service\hysS.java
 F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\Security\Enums\RolNombre.java
 F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\model\Experiencia.java
+F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\Security\Dto\PersonaDto.java
 F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\Security\Entity\UsuarioPrincipal.java
 F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\Security\Repository\iUsuarioRepository.java
 F:\proyectos\Spring Boot\Spring-Boot\src\main\java\com\ejemplo\Spring\Boot\repositorio\RExperiencia.java
